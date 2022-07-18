@@ -4,7 +4,7 @@
 
 Did you get mad confuse reading the above line? That is actually code from the BF programming language!
 
-A few days ago I watched this youtube video https://www.youtube.com/watch?v=hdHjjBS4cs8&ab_channel=Fireship and was very interested in the BF programming language itself and how Fireship generate BF code. So I was thinking, can I generalize their idea and write a script that just spits out BF code in a short and succint way? My goal is that if I would have to type out BF code manually, I don't need to type in that many characters nor think too much on what that means but can expect correct code generation. So here we go:
+A few days ago I watched this youtube video https://www.youtube.com/watch?v=hdHjjBS4cs8&ab_channel=Fireship and was very interested in the BF programming language itself and how Fireship generate BF code. So I was thinking, can I generalize their idea and write a script that just spits out BF code in a short and succinct way? My goal is that if I would have to type out BF code manually, I don't need to type in that many characters nor think too much on what that means but can expect correct code generation. So here we go:
 
 ## First Optimization
 
