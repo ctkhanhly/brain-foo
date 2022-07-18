@@ -10,19 +10,19 @@ A few days ago I watched this youtube video https://www.youtube.com/watch?v=hdHj
 
 If we look at Fireship's code to print out letter 'h':
 +[----->+++<]>+.
-The characters before [ will be either some number of '+' or '-' and I call this number s (positive for '+' and negative for '-'). This number cannot be zero if we are using loop at all.
+The characters before [ will be either some number of '+' or '-' and I call this number **s** (positive for '+' and negative for '-'). This number cannot be zero if we are using loop at all.
 
-The number of '-' characters before > inside square brackets ([]) will be a, this number has to be nonnegative.
+The number of '-' characters before > inside square brackets ([]) will be **a**, this number has to be nonnegative.
 
-The number of '+' characters after > and before < inside square brackets ([]) will be b, this number has to be nonnegative.
+The number of '+' characters after > and before < inside square brackets ([]) will be **b**, this number has to be nonnegative.
 
-The number of '+' or '-' characters after the square brackets will be k.
+The number of '+' or '-' characters after the square brackets will be **k**.
 
 What Fireship does is first add some offset s to the first byte and go on a loop trying to making this byte 0 while changing the second byte so that at the end of the loop the first byte is 0 and the second byte will contains the ASCII number of the desired character. After the loop, increment the position pointer to the second byte and print out the character (optionally add a few more offset k to the second byte before that).
 
 Here's the equation to solve for a,b,s,k:
 
-Let t be the first nonnegative number such that (-t*a + s) % 256 = 0, this represents the number of times the loop is run before the first byte becomes 0.
+Let **t** be the first nonnegative number such that (-t*a + s) % 256 = 0, this represents the number of times the loop is run before the first byte becomes 0.
 
 Ideally, we want k to be 0 to minimize the number of characters in the code, so we want t*b % 256 = c.
 
