@@ -7,13 +7,13 @@ python3 test.py > codepy
 IS_TEST=True python3 interpreter.py 0<codehs 1> ouths
 IS_TEST=True python3 interpreter.py 0<codepy 1> outpy
 
-cmp ouths sol 2>&1 2> /dev/null
+cmp ouths sol 2>&1 1> /dev/null
 if [$? != 0]; then
     echo "Haskell algo is incorrect"
 else
     echo "Haskell algo is correct"
 fi
-cmp outpy sol 2>&1 2> /dev/null
+cmp outpy sol 2>&1 1> /dev/null
 if [$? != 0]; then
     echo "Python algo is incorrect"
 else

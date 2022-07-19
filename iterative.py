@@ -5,6 +5,21 @@ line = input()
 pos = 0
 d = {}
 
+def convert(line):
+    result = []
+    i = 0
+    while i < len(line):
+        if line[i] == "\\":
+            if i+1 < len(line) and line[i+1] == 'x':
+                assert(i+4 <= len(line))
+                result.append(chr(int(line[i+2:i+4], 16)))
+                i+=4
+        else:
+            result.append(line[i])
+            i+= 1
+
+    return ''.join(result)
+
 # The algorithm only ever uses byte at indices 0 and 1
 def get_clear_code():
     global pos, d
@@ -28,6 +43,7 @@ def get_clear_code():
             clear_code += "[-]"
     return clear_code
 
+line = convert(line)
 for c in line:
     index = ord(c)
     clear_code = get_clear_code()
